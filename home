@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDGING GRAVITY | Climbing Culture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --accent: #e63946;
+      --text: #f1f1f1;
+      --muted: #9e9e9e;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      border: 2px solid var(--accent);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    section {
+      padding: 4rem 8%;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .product-card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .founder {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    footer {
+      background: #080808;
+      padding: 3rem 8%;
+      text-align: center;
+    }
+
+    .socials a {
+      margin: 0 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    footer p {
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>EDGING GRAVITY</h1>
+      <p>Climbing past limits. Built for the wall.</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about">
+      EDGING GRAVITY is a climbing-focused brand built by climbers, for climbers. 
+      We design clean, durable gear and apparel inspired by movement, rock, and gravity itself.
+    </p>
+  </section>
+
+  <section id="shop">
+    <h2 class="section-title">Shop</h2>
+    <div class="products">
+      <div class="product-card">
+        <h3>Edging Gravity Tee</h3>
+        <p>Minimalist climbing tee built for sessions and street wear.</p>
+      </div>
+      <div class="product-card">
+        <h3>Chalk Bag</h3>
+        <p>Durable, lightweight chalk bag with a clean aesthetic.</p>
+      </div>
+      <div class="product-card">
+        <h3>Stickers Pack</h3>
+        <p>High-quality vinyl stickers for bottles, pads, and boards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="founders">
+    <h2 class="section-title">Founders</h2>
+    <div class="founders">
+      <div class="founder">Theo Stechysin</div>
+      <div class="founder">Aarya Bhatt</div>
+      <div class="founder">Cedric Sabourin</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>© 2026 EDGING GRAVITY. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // simple smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
